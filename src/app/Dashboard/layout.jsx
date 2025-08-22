@@ -16,7 +16,7 @@ export default function DashboardLayout({ children }) {
   const [isOpen, setIsOpen] = useState(false); // mobile sidebar
   const [collapsed, setCollapsed] = useState(false); // desktop collapse
 
-  const { status } = useSession();
+  // const { status } = useSession();
 
 //   if (status === "loading") {
 //     return (

@@ -1,6 +1,6 @@
 
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = process.env.db_uri;
+const uri = process.env.NEXT_PUBLIC_db_uri;
 
 export const collectionList={
     usersCollection: "usersCollection",
@@ -23,10 +23,12 @@ try {
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
-    return await client.db(process.env.db_name).collection(collectionName);
-  } finally {
+
+    return  await client.db(process.env.NEXT_PUBLIC_db_name).collection(collectionName);
+  } catch {
     // Ensures that the client will close when you finish/error
     // await client.close();
+    console.log("Something went wrong !!!");
   }
 
 }
