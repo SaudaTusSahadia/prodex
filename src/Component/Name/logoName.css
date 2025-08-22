@@ -1,0 +1,16 @@
+.logo-gradient {
+  background: linear-gradient(90deg, #f472b6, #8b5cf6); /* Tailwind pink-400 to purple-500 */
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
